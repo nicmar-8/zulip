@@ -418,7 +418,7 @@ export function show_edit_bot_info_modal(user_id, from_user_info_popover) {
         $("#edit_bot_modal .dialog_submit_button").prop("disabled", true);
 
         function get_options() {
-            const user_ids = people.get_active_human_ids();
+            const user_ids = people.get_realm_active_human_user_ids();
             // Remove current owner.
             user_ids.splice(user_ids.indexOf(owner_id), 1);
             return user_ids.map((user_id) => ({
